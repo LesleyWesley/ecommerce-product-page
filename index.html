@@ -7,6 +7,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,20 +21,39 @@
 </head>
 <body>
   <header>
-      <div class="header-half">
-          <nav>
-              <img src="images/icon-menu.svg" alt="menu" />
-          </nav>
-          <img src="images/logo.svg" alt="" />
-      </div>
-
-      <div class="header-half">
-          <div class="cart-div">
-              <div class="cart-count"></div>
-              <img src="images/icon-cart.svg" alt="cart" />
+      <div class="container">
+          <div class="header-half">
+              <nav>
+                  <img src="images/icon-menu.svg" alt="menu" />
+              </nav>
+              <img src="images/logo.svg" alt="" class="logo"/>
           </div>
-          <img src="images/image-avatar.png" alt="" class="profile-pic" />
-      </div>
+
+          <div class="header-half cart-side">
+              <div class="cart-div">
+                  <div class="cart-count">3</div>
+                  <img src="images/icon-cart.svg" alt="cart" class="cart-icon" />
+              </div>
+              <img src="images/image-avatar.png" alt="" class="profile-pic" />
+
+              <!--Start of actual cart -->
+
+              <div class="cart">
+                  <div class="cart-header">
+                      Cart
+                  </div>
+                  <div class="cart-main">
+                      <img src="images/image-product-1-thumbnail.jpg" alt="" />
+                      <div class="cart-contents-description">
+                          <p>Fall Limited Edition Sneakers</p>
+                          <p>$125.00 x <span class="cart-quantity">3</span><span class="cart-total">$375.00</span></p>
+                      </div>
+                      <img src="images/icon-delete.svg" alt="delete" />
+                  </div>
+                  <a href="#">Checkout</a>
+              </div>
+          </div>
+    </div>
   </header>
 
   <main>
@@ -52,10 +75,10 @@
               <div class="highlighted-image">
               </div>
               <div class="thumbnail-section">
-                  <img src="images/image-product-1-thumbnail.jpb" alt="" class="thumbnail image-1" />
-                  <img src="images/image-product-2-thumbnail.jpb" alt="" class="thumbnail image-2" />
-                  <img src="images/image-product-3-thumbnail.jpb" alt="" class="thumbnail image-3" />
-                  <img src="images/image-product-4-thumbnail.jpb" alt="" class="thumbnail image-4" />
+                  <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail image-1" />
+                  <img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbnail image-2" />
+                  <img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbnail image-3" />
+                  <img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbnail image-4" />
               </div>
           </div>
 <!--Start of lightbox section -->
@@ -89,26 +112,28 @@
 <!-- Start of Details Section -->
 
       <section class="details-section">
-          <h1>Sneaker Company</h1>
-          <h2>Fall Limited Edition Sneakers</h2>
-          <p>These low-profile sneakers are your perfect casual wear companion.  Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+          <div class="container">
+              <h1>Sneaker Company</h1>
+              <h2>Fall Limited Edition Sneakers</h2>
+              <p>These low-profile sneakers are your perfect casual wear companion.  Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
 
-          <div class="pricing-section">
-              <div class="actual-price">
-                  <h3>$125.00</h3>
-                  <span class="discount">50%</span>
+              <div class="pricing-section">
+                  <div class="actual-price">
+                      <h3>$125.00</h3>
+                      <span class="discount">50%</span>
+                  </div>
+                  <span class="original-price">$250.00</span>
               </div>
-              <span class="original-price">$250.00</span>
-          </div>
 
-          <form>
-              <label for="quantity">
-                  <img src="images/icon-minus.svg" alt="minus" />
-                  <input type="number" name="quantity" id="quantity" min="0"/>
-                  <img src="images/icon-plus.svg" alt="plus" />
-              </label>
-              <input type="submit" value="Add to cart" />
-          </form>
+              <form>
+                  <label for="quantity">
+                      <img src="images/icon-minus.svg" alt="minus" />
+                      <input type="number" name="quantity" id="quantity" min="0"/>
+                      <img src="images/icon-plus.svg" alt="plus" />
+                  </label>
+                  <input type="submit" value="Add to cart" />
+              </form>
+        </div>
       </section>
 
 <!-- End of Details Section -->

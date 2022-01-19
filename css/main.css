@@ -1,0 +1,101 @@
+/*Variables for Colors */
+
+:root {
+  --clr-orange: #ff7d1a;
+  --clr-pale-orange: 	#ffede0;
+  --clr-dark-text: 	#1d2025;
+  --clr-light-text: #68707d;
+  --clr-lightest-text: 	#b6bcc8;
+  --clr-quantity-bg: 	#f7f8fd;
+  --clr-white: #ffffff;
+  --clr-lightbox-bg: rgba(0, 0, 0, .75);
+}
+
+/*Base Stylings*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  font-size: 1rem;
+  background-color: var(--clr-white);
+  color: var(--clr-dark-text);
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile Styling - Header */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+ header .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 90%;
+}
+
+.header-half {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: .25rem;
+}
+
+.logo {
+  margin-left: 1rem;
+}
+
+
+.cart-side {
+  width: 18%;
+}
+
+.cart-div {
+  position: relative;
+  padding: .4rem .4rem 0 0;
+}
+
+.cart-icon {
+  z-index: 1;
+  width: 1.25rem;
+}
+
+.cart-count {
+  position: absolute;
+  z-index: 2;
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+  font-size: .6rem;
+  height: .75rem;
+  width: 1.1rem;
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 0;
+}
+
+.profile-pic {
+  width: 1.4rem;
+}
+
+.cart {
+  display: none;
+}
