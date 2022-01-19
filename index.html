@@ -33,5 +33,86 @@
       </div>
   </header>
 
+  <main>
+<!--Start of Photos Section -->
+
+      <section class="photo-section">
+      <!--Start of Mobile Photo Section -->
+          <div class="mobile-photos-section">
+              <div class="carousel-photo">
+              </div>
+              <div class="forward-back-buttons">
+                  <button type="button" name="back"></button>
+                  <button type="button" name="forward"></button>
+              </div>
+          </div>
+
+      <!--Start of Desktop Photo Section -->
+          <div class="desktop-photos-section">
+              <div class="highlighted-image">
+              </div>
+              <div class="thumbnail-section">
+                  <img src="images/image-product-1-thumbnail.jpb" alt="" class="thumbnail image-1" />
+                  <img src="images/image-product-2-thumbnail.jpb" alt="" class="thumbnail image-2" />
+                  <img src="images/image-product-3-thumbnail.jpb" alt="" class="thumbnail image-3" />
+                  <img src="images/image-product-4-thumbnail.jpb" alt="" class="thumbnail image-4" />
+              </div>
+          </div>
+<!--Start of lightbox section -->
+          <div class="lightbox">
+              <header class="lightbox_header">
+                  <img src="images/icon-close.svg" alt="close" />
+              </header>
+
+              <div class="lightbox-main">
+                  <div class="lightbox_active-image-container">
+                    <div class="lightbox_active-image">
+                    </div>
+                    <div class="lightbox_forward-back-buttons">
+                        <button type="button" name="back"></button>
+                        <button type="button" name="forward"></button>
+                    </div>
+                  </div>
+
+                  <!--Start of lightbox thumbnail section -->
+                  <div class="lightbox_thumbnail-section">
+                      <img src="images/image-product-1-thumbnail.jpb" alt="" class="thumbnail image-1" />
+                      <img src="images/image-product-2-thumbnail.jpb" alt="" class="thumbnail image-2" />
+                      <img src="images/image-product-3-thumbnail.jpb" alt="" class="thumbnail image-3" />
+                      <img src="images/image-product-4-thumbnail.jpb" alt="" class="thumbnail image-4" />
+                  </div>
+              </div>
+          </div>
+      </section>
+<!-- End of Photos Section -->
+
+<!-- Start of Details Section -->
+
+      <section class="details-section">
+          <h1>Sneaker Company</h1>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p>These low-profile sneakers are your perfect casual wear companion.  Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+
+          <div class="pricing-section">
+              <div class="actual-price">
+                  <h3>$125.00</h3>
+                  <span class="discount">50%</span>
+              </div>
+              <span class="original-price">$250.00</span>
+          </div>
+
+          <form>
+              <label for="quantity">
+                  <img src="images/icon-minus.svg" alt="minus" />
+                  <input type="number" name="quantity" id="quantity" min="0"/>
+                  <img src="images/icon-plus.svg" alt="plus" />
+              </label>
+              <input type="submit" value="Add to cart" />
+          </form>
+      </section>
+
+<!-- End of Details Section -->
+  </main>
+
 </body>
 </html>
