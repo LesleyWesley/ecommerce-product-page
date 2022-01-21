@@ -97,7 +97,14 @@ nav {
 }
 
 .cart {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  position: absolute;
+  background-color: var(--clr-white);
+  top: 5rem;
 }
 
 /*Mobile Styling - Photo Carousel */
