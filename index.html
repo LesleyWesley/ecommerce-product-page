@@ -63,10 +63,14 @@
       <!--Start of Mobile Photo Section -->
           <div class="mobile-photos-section">
               <div class="carousel-photo">
+                  <img src="images/image-product-1.jpg" alt="" class="carousel-image" />
+                  <img src="images/image-product-2.jpg" alt="" class="carousel-image" />
+                  <img src="images/image-product-3.jpg" alt="" class="carousel-image" />
+                  <img src="images/image-product-4.jpg" alt="" class="carousel-image" />
               </div>
               <div class="forward-back-buttons">
-                  <button type="button" name="back"></button>
-                  <button type="button" name="forward"></button>
+                  <button type="button" name="back" class="back"></button>
+                  <button type="button" name="forward" class="forward"></button>
               </div>
           </div>
 
@@ -83,9 +87,9 @@
           </div>
 <!--Start of lightbox section -->
           <div class="lightbox">
-              <header class="lightbox_header">
+              <div class="lightbox_header">
                   <img src="images/icon-close.svg" alt="close" />
-              </header>
+              </div>
 
               <div class="lightbox-main">
                   <div class="lightbox_active-image-container">
@@ -126,12 +130,15 @@
               </div>
 
               <form>
-                  <label for="quantity">
+                  <label for="quantity" class="quantity-label">
                       <img src="images/icon-minus.svg" alt="minus" />
-                      <input type="number" name="quantity" id="quantity" min="0"/>
+                      <input type="number" name="quantity" id="quantity" min="0" value="0"/>
                       <img src="images/icon-plus.svg" alt="plus" />
                   </label>
-                  <input type="submit" value="Add to cart" />
+                  <button type="submit" class="submit">
+                      <img src="images/icon-cart-white.svg" alt="cart" class="submit-cart-icon"/>
+                      Add to cart
+                  </button>
               </form>
         </div>
       </section>
