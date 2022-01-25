@@ -403,6 +403,7 @@ p {
   justify-content: space-between;
   align-items: center;
   width: 55%;
+  max-width: 12rem;
 }
 
 h3 {
@@ -468,4 +469,63 @@ form {
 
 .submit-cart-icon {
   padding-right: 1rem;
+}
+
+/*================================================
+
+    TABLET STYLING
+
+===================================================*/
+
+@media (min-width: 700px) {
+
+    .toggler,
+    .hamburger {
+      left: 5rem;
+    }
+
+    nav ul {
+      padding: 0 5rem;
+    }
+
+    header .container,
+    .details-section .container {
+      width: 80%;
+    }
+
+    .photo-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mobile-photos-section {
+      display: none;
+    }
+
+    .desktop-photos-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 80%;
+    }
+
+    .highlighted-image img{
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      margin: 2rem 0;
+    }
+
+    .thumbnail-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .thumbnail {
+      width: 20%;
+      border-radius: 1rem;
+    }
 }
