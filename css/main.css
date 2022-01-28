@@ -206,6 +206,8 @@ nav ul a {
 
 .profile-pic {
   width: 1.4rem;
+  border-radius: 50%;
+  border: 3px solid var(--clr-white);
 }
 
 .cart {
@@ -627,6 +629,11 @@ form {
 
   .profile-pic {
     width: 3rem;
+  }
+
+  .profile-pic:hover {
+    border: 3px solid var(--clr-orange);
+    cursor: pointer;
   }
 
   .cart {
