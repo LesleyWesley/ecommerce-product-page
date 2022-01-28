@@ -353,9 +353,9 @@ button {
   display: none;
 }
 
-.lightbox {
+/*.lightbox {
   display: none;
-}
+}*/
 
 /*Mobile Styling - Text Section */
 
@@ -594,7 +594,12 @@ form {
     color: inherit;
     font-weight: 400;
     font-size: .9rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.8rem;
+  }
+
+  nav ul li a:hover {
+    color: var(--clr-dark-text);
+    border-bottom: 3px solid var(--clr-orange);
   }
 
   .logo {
@@ -704,6 +709,21 @@ form {
 
   .submit {
     width: 60%;
+  }
+
+  /* Lightbox styling*/
+
+  .lightbox {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--clr-lightbox-bg);
   }
 
 }
