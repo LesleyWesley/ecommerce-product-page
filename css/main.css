@@ -174,7 +174,7 @@ nav ul a {
 
 .cart-side {
   width: 18%;
-  max-width: 8rem;
+  max-width: 6rem;
 }
 
 .cart-div {
@@ -186,7 +186,13 @@ nav ul a {
 .cart-icon {
   z-index: 1;
   width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../images/icon-cart.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
 
 .cart-count {
   position: absolute;
@@ -205,9 +211,9 @@ nav ul a {
 }
 
 .profile-pic {
-  width: 1.4rem;
+  width: 1.6rem;
   border-radius: 50%;
-  border: 3px solid var(--clr-white);
+  border: 2px solid var(--clr-white);
 }
 
 .cart {
@@ -461,6 +467,16 @@ form {
   font-size: 1.125rem;
 }
 
+#quantity::-webkit-outer-spin-button,
+#quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .submit {
   background-color: var(--clr-orange);
   color: var(--clr-white);
@@ -473,6 +489,25 @@ form {
 
 .submit-cart-icon {
   padding-right: 1rem;
+}
+
+/* Active States */
+
+.cart-count:hover {
+  cursor: pointer;
+  background-image: url("../images/icon-cart-hover.svg");
+}
+
+.profile-pic:hover {
+  border: 2px solid var(--clr-orange);
+  cursor: pointer;
+}
+
+.submit:hover,
+.quantity-button:hover,
+.checkout-button:hover {
+  cursor: pointer;
+  opacity: .5;
 }
 
 /*================================================
@@ -613,7 +648,8 @@ form {
   /*Cart Section Styling - Desktop */
 
   .cart-side {
-    width: 15%;
+    width: 12%;
+    max-width: none;
   }
 
   .cart-icon {
@@ -628,12 +664,7 @@ form {
   }
 
   .profile-pic {
-    width: 3rem;
-  }
-
-  .profile-pic:hover {
-    border: 3px solid var(--clr-orange);
-    cursor: pointer;
+    width: 2.75rem;
   }
 
   .cart {
@@ -718,19 +749,29 @@ form {
     width: 60%;
   }
 
-  /* Lightbox styling*/
-
   .lightbox {
     position: absolute;
-    z-index: 8;
-    top: 0;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--clr-lightbox-bg);
+    background: var(--clr-lightbox-bg);
+    left: 0;
+    top: 0;
+    z-index: 7;
   }
+
+  .lightbox-header,
+  .lightbox-main {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
 
 }
