@@ -756,22 +756,71 @@ input[type=number] {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background: var(--clr-lightbox-bg);
     left: 0;
     top: 0;
     z-index: 7;
   }
 
-  .lightbox-header,
-  .lightbox-main {
-    width: 60%;
+  .lightbox-content-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 50%;
   }
 
+  .lightbox_header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .lightbox_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+  }
+
+  .lightbox_active-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .lightbox_active-image {
+    width: 100%;
+    border-radius: 1rem;
+    background-image: url("../images/image-product-1.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15rem 0;
+  }
+
+  .lightbox_forward-back-buttons {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 8;
+  }
+
+  .lightbox_thumbnail-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  button[name="forward"] {
+    
+  }
 
 
 }
