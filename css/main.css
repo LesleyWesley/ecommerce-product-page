@@ -182,7 +182,7 @@ nav ul a {
 .cart-div {
   position: relative;
   padding: .4rem .4rem 0 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .cart-icon {
@@ -495,9 +495,15 @@ input[type=number] {
 
 /* Active States */
 
-.cart-count:hover {
+.cart-icon:hover{
   cursor: pointer;
   background-image: url("../images/icon-cart-hover.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cart-count:hover {
+  cursor: pointer;
 }
 
 .profile-pic:hover {
@@ -568,8 +574,12 @@ input[type=number] {
       align-items: center;
     }
 
-    .thumbnail {
+    .desktop-photos-section .thumbnail-div {
       width: 20%;
+    }
+
+    .thumbnail {
+      width: 100%;
       border-radius: 1rem;
     }
 
