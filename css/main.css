@@ -233,7 +233,6 @@ nav ul a {
   border-radius: .5rem;
   padding: 1.5rem 0;
   box-shadow: 0rem 1rem 2rem var(--clr-lightest-text);
-  display: none;
 }
 
 .cart-header {
@@ -781,6 +780,8 @@ input[type=number] {
     top: 0;
     z-index: 7;
   }
+
+
 
   .lightbox-content-container {
     display: flex;
