@@ -177,6 +177,11 @@ nav ul a {
 .cart-side {
   width: 20%;
   max-width: 6rem;
+  z-index: 1;
+}
+
+.cart-side .active-menu {
+  z-index: 0;
 }
 
 .cart-div {
