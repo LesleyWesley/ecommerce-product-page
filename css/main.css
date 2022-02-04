@@ -175,14 +175,13 @@ nav ul a {
 
 
 .cart-side {
-  width: 18%;
+  width: 20%;
   max-width: 6rem;
 }
 
 .cart-div {
   position: relative;
   padding: .4rem .4rem 0 0;
-  z-index: 0;
 }
 
 .cart-icon {
@@ -226,7 +225,7 @@ nav ul a {
   z-index: 4;
   position: absolute;
   background-color: var(--clr-white);
-  top: 20%;
+  top: 110%;
   width: 94%;
   max-width: 25rem;
   left: 3%;
@@ -281,7 +280,7 @@ nav ul a {
   padding-left: .5rem;
 }
 
-.cart a {
+.checkout-button{
   margin-top: 1.5rem;
   height: 4rem;
   text-decoration: none;
@@ -293,7 +292,10 @@ nav ul a {
   align-items: center;
   font-weight: 700;
   border-radius: .5rem;
+}
 
+.cart-empty {
+  padding: 2.5rem 0;
 }
 
 /*Mobile Styling - Photo Carousel */
@@ -540,6 +542,11 @@ input[type=number] {
     header .container,
     .details-section .container {
       width: 80%;
+    }
+
+    .cart {
+      left: auto;
+      right: 3%;
     }
 
     .photo-section {

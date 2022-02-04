@@ -19,6 +19,13 @@ const cartIcon = document.querySelector(".cart-div");
 
 const cart = document.querySelector(".cart");
 
+
+
+//============================================================
+
+
+
+
 //============================================================
 
 //Adds ability to open cart when cart div is clicked
