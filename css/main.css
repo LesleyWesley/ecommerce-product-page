@@ -319,29 +319,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.carousel-photo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-  height: 19rem;
-  z-index: 1;
-  position: relative;
-}
-
-.carousel-image {
-  width: 100%;
-}
-
-.forward-back-buttons {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
+  background-image: url("../images/image-product-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10rem 0;
 }
 
 button {
@@ -357,10 +338,12 @@ button {
 
 .back {
   background-image: url("../images/icon-previous.svg");
+  left: 20%;
 }
 
 .forward {
-  background-image: url("../images/icon-next.svg")
+  background-image: url("../images/icon-next.svg");
+  right: 20%;
 }
 
 /* Hides Desktop Photo Displays*/
@@ -522,6 +505,14 @@ input[type=number] {
 .checkout-button:hover {
   cursor: pointer;
   opacity: .5;
+}
+
+.cart-div:active,
+.delete:active,
+.quantity-button:active,
+.back:active,
+.forward:active {
+  transform: scale(.75);
 }
 
 

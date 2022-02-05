@@ -59,9 +59,29 @@ const cartQuantitySpan = document.querySelector(".cart-quantity");
 
 const totalPrice = document.querySelector(".cart-total");
 
+//Selects delete icon in cart
+
+const remove = document.querySelector(".delete");
+
+//Selects mobile image carousel forward and back buttons
+
+const mobileForward = document.querySelector(".forward");
+
+const mobileBackward = document.querySelector(".back");
+
 //Contents of cart (number)
 
 let cartQuantity = 0;
+
+//============================================================
+
+mobileForward.addEventListener("click", function() {
+  console.log("hi!");
+})
+
+mobileBackward.addEventListener("click", function() {
+  console.log("howdy!");
+})
 
 
 //============================================================
@@ -84,6 +104,7 @@ minus.addEventListener("click", function() {
 
 addToCartButton.addEventListener("click", function () {
   if (quantityInput.value > 0) {
+    //!!Need to fix the following line!!
     cartQuantity = quantityInput.value;
     quantityInput.value = 0;
     console.log(cartQuantity);
@@ -98,6 +119,19 @@ addToCartButton.addEventListener("click", function () {
     cartQuantitySpan.innerText = `${cartQuantity}`;
     totalPrice.innerText = `$${125 * cartQuantity}.00`;
   }
+})
+
+//============================================================
+
+//Empties cart when delete button is clicked
+
+remove.addEventListener("click", function() {
+  cartQuantity = 0;
+  console.log(cartQuantity);
+  emptyMessage.classList.remove("hide");
+  fullCartContent.classList.add("hide");
+  checkoutButton.classList.add("hide");
+  cartQuantityDiv.classList.add("hide");
 })
 
 
