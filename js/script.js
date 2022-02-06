@@ -63,11 +63,17 @@ const totalPrice = document.querySelector(".cart-total");
 
 const remove = document.querySelector(".delete");
 
-//Selects mobile image carousel forward and back buttons
+//Selects cart side of header
 
-const mobileForward = document.querySelector(".forward");
+const cartSide = document.querySelector(".cart-side");
 
-const mobileBackward = document.querySelector(".back");
+//Selects menu toggler
+
+const toggler = document.querySelector(".toggler");
+
+//Selects menu wrap
+
+const menuWrap = document.querySelector(".menu-wrap");
 
 //Contents of cart (number)
 
@@ -75,14 +81,17 @@ let cartQuantity = 0;
 
 //============================================================
 
-mobileForward.addEventListener("click", function() {
-  console.log("hi!");
-})
+//Fixes issue with cart side of header being in front of mobile menu
 
-mobileBackward.addEventListener("click", function() {
-  console.log("howdy!");
+toggler.addEventListener("click", function() {
+  if (toggler.checked) {
+    cartSide.style.zIndex = "0";
+    menuWrap.style.width = "100vw";
+  } else {
+    cartSide.style.zIndex = "1";
+    menuWrap .style.width = "0%";
+  }
 })
-
 
 //============================================================
 
