@@ -319,9 +319,8 @@ nav ul a {
   justify-content: center;
   align-items: center;
   padding: 9rem 0;
-  background-image: url("../images/image-product-1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 
@@ -337,6 +336,24 @@ nav ul a {
   padding: .75rem;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+/*Classes for JavaScript - Carousel */
+
+.image-1 {
+  background-image: url("../images/image-product-1.jpg");
+}
+
+.image-2 {
+  background-image: url("../images/image-product-2.jpg");
+}
+
+.image-3 {
+  background-image: url("../images/image-product-3.jpg");
+}
+
+.image-4 {
+  background-image: url("../images/image-product-4.jpg");
 }
 
 /*Mobile Styling - Text Section */
@@ -534,45 +551,58 @@ input[type=number] {
       align-items: center;
     }
 
-    .mobile-photos-section {
+    .mobile-photo-section {
       display: none;
     }
 
     .desktop-photos-section {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       flex-direction: column;
       width: 80%;
     }
 
-    .highlighted-image img{
+    .main-image {
       width: 100%;
-      height: auto;
-      border-radius: 1rem;
-      margin: 2rem 0;
+      aspect-ratio: 1;
+      border-radius: .5rem;
+      margin-bottom: 2rem;
+      background: green;
     }
 
     .thumbnail-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .desktop-photos-section .thumbnail-div {
-      width: 20%;
-    }
-
-    .thumbnail {
       width: 100%;
-      border-radius: 1rem;
     }
 
-    .thumbnail:hover,
-    .highlighted-image:hover {
-      cursor: pointer;
+
+    .thumbnail-image {
+      width: 20%;
+      aspect-ratio: 1;
+      border-radius: .5rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
+    .thumbnail-1 {
+      background-image: url("../images/image-product-1-thumbnail.jpg");
+    }
+
+    .thumbnail-2 {
+      background-image: url("../images/image-product-2-thumbnail.jpg");
+    }
+
+    .thumbnail-3 {
+      background-image: url("../images/image-product-3-thumbnail.jpg");
+    }
+
+    .thumbnail-4 {
+      background-image: url("../images/image-product-4-thumbnail.jpg");
+    }
 }
 
 /*===================================================

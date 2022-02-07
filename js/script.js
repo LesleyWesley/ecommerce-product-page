@@ -1,8 +1,6 @@
 //Variables
 
 
-//Selects main image on desktop browser
-const mainImage = document.querySelector(".highlighted-image");
 
 //Selects lightbox_active
 const lightbox = document.querySelector(".lightbox");
@@ -75,9 +73,28 @@ const toggler = document.querySelector(".toggler");
 
 const menuWrap = document.querySelector(".menu-wrap");
 
+//Selects photo carousel buttons
+
+const next = document.querySelector(".next");
+
+const previous = document.querySelector(".previous");
+
+//Selects photo carousel
+
+const photoCarousel = document.querySelector(".mobile-photo-section");
 //Contents of cart (number)
 
 let cartQuantity = 0;
+
+//Index of photo Carousel
+
+let i = 1;
+
+//============================================================
+
+
+
+
 
 //============================================================
 
@@ -91,6 +108,46 @@ toggler.addEventListener("click", function() {
     cartSide.style.zIndex = "1";
     menuWrap .style.width = "0%";
   }
+})
+
+//============================================================
+
+//Cycles to next image on photo carousel when next button is clicked
+
+const showNext = function () {
+  if (i === 4) {
+      photoCarousel.classList.remove(`image-${i}`);
+      i = 1;
+      photoCarousel.classList.add(`image-${i}`);
+  } else {
+    photoCarousel.classList.remove(`image-${i}`);
+      i++;
+    photoCarousel.classList.add(`image-${i}`);
+}
+}
+
+next.addEventListener("click", function () {
+  showNext();
+})
+
+//============================================================
+
+//Cycles to previous image on photo carousel when previous button is clicked
+
+const showPrevious = function() {
+  if (i === 1) {
+    photoCarousel.classList.remove(`image-${i}`);
+    i = 4;
+    photoCarousel.classList.add(`image-${i}`);
+  } else {
+    photoCarousel.classList.remove(`image-${i}`);
+    i--;
+    photoCarousel.classList.add(`image-${i}`);
+  }
+}
+
+previous.addEventListener("click", function() {
+  showPrevious();
 })
 
 //============================================================
@@ -161,12 +218,6 @@ cartIcon.addEventListener("click", function() {
 
 //Adds ability to open and close lightbox
 
-mainImage.addEventListener("click", function() {
-  lightbox.classList.remove("hide");
-})
 
-lightboxClose.addEventListener("click", function() {
-  lightbox.classList.add("hide");
-})
 
 //===========================================================
