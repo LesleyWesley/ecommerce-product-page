@@ -152,6 +152,10 @@ previous.addEventListener("click", function() {
 
 //============================================================
 
+
+
+//============================================================
+
 //Adds ability to add or subtract quantity using plus and minus icons
 
 plus.addEventListener("click", function() {

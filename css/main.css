@@ -567,8 +567,14 @@ input[type=number] {
       width: 100%;
       aspect-ratio: 1;
       border-radius: .5rem;
-      margin-bottom: 2rem;
-      background: green;
+      margin-bottom: 1rem;
+      background-position: top;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .main-image:hover {
+      cursor: pointer;
     }
 
     .thumbnail-section {
@@ -586,22 +592,47 @@ input[type=number] {
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      border: 3px solid var(--clr-white);
+    }
+
+    .thumbnail-image:hover {
+      background-size: contain cover;
+      background-position: center center;
+      background-repeat: no-repeat no-repeat;
+      border: 3px solid var(--clr-orange);
+      cursor: pointer;
     }
 
     .thumbnail-1 {
       background-image: url("../images/image-product-1-thumbnail.jpg");
     }
 
+    .thumbnail-1:hover {
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-1-thumbnail.jpg");
+    }
+
     .thumbnail-2 {
       background-image: url("../images/image-product-2-thumbnail.jpg");
+    }
+
+    .thumbnail-2:hover {
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-2-thumbnail.jpg");
     }
 
     .thumbnail-3 {
       background-image: url("../images/image-product-3-thumbnail.jpg");
     }
 
+    .thumbnail-3:hover {
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-3-thumbnail.jpg");
+    }
+
     .thumbnail-4 {
       background-image: url("../images/image-product-4-thumbnail.jpg");
+    }
+
+    .thumbnail-4:hover {
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-4-thumbnail.jpg");
     }
 }
 
@@ -713,6 +744,10 @@ input[type=number] {
     align-items: center;
   }
 
+  .empty-cart-message {
+    width: 100%;
+  }
+
 
   main {
     display: flex;
@@ -721,18 +756,15 @@ input[type=number] {
     width: 80%;
   }
 
-  section {
-    width: 100%;
-  }
 
   .details-section .container {
-    width: 80%;
-    padding: 0;
+    width: 90%;
   }
 
   .photo-section {
-    width: auto;
+    width: 100%;
   }
+
 
 /* Details Section Styling - Desktop */
 
