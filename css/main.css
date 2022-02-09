@@ -304,6 +304,10 @@ nav ul a {
   padding: 2.5rem 0;
 }
 
+.delete:hover {
+  cursor: pointer;
+}
+
 /*Mobile Styling - Photo Carousel */
 
 .photo-section {
@@ -611,12 +615,28 @@ input[type=number] {
       background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-1-thumbnail.jpg");
     }
 
+   .active-1 {
+      border: 3px solid var(--clr-orange);
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-1-thumbnail.jpg");
+      background-size: contain cover;
+      background-position: center center;
+      background-repeat: no-repeat no-repeat;
+    }
+
     .thumbnail-2 {
       background-image: url("../images/image-product-2-thumbnail.jpg");
     }
 
     .thumbnail-2:hover {
       background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-2-thumbnail.jpg");
+    }
+
+    .active-2 {
+      border: 3px solid var(--clr-orange);
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-2-thumbnail.jpg");
+      background-size: contain cover;
+      background-position: center center;
+      background-repeat: no-repeat no-repeat;
     }
 
     .thumbnail-3 {
@@ -627,12 +647,28 @@ input[type=number] {
       background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-3-thumbnail.jpg");
     }
 
+    .active-3 {
+      border: 3px solid var(--clr-orange);
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-3-thumbnail.jpg");
+      background-size: contain cover;
+      background-position: center center;
+      background-repeat: no-repeat no-repeat;
+    }
+
     .thumbnail-4 {
       background-image: url("../images/image-product-4-thumbnail.jpg");
     }
 
     .thumbnail-4:hover {
       background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-4-thumbnail.jpg");
+    }
+
+    .active-4 {
+      border: 3px solid var(--clr-orange);
+      background-image:  linear-gradient(var(--clr-overlay), var(--clr-overlay)), url("../images/image-product-4-thumbnail.jpg");
+      background-size: contain cover;
+      background-position: center center;
+      background-repeat: no-repeat no-repeat;
     }
 }
 

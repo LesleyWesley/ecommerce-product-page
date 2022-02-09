@@ -82,6 +82,18 @@ const previous = document.querySelector(".previous");
 //Selects photo carousel
 
 const photoCarousel = document.querySelector(".mobile-photo-section");
+
+//Selects main image of desktop photo display
+
+const mainImage = document.querySelector(".main-image");
+
+//Selects thumbnails for desktop photo display
+
+const t1 = document.querySelector(".thumbnail-1");
+const t2 = document.querySelector(".thumbnail-2");
+const t3 = document.querySelector(".thumbnail-3");
+const t4 = document.querySelector(".thumbnail-4");
+
 //Contents of cart (number)
 
 let cartQuantity = 0;
@@ -89,6 +101,7 @@ let cartQuantity = 0;
 //Index of photo Carousel
 
 let i = 1;
+
 
 //============================================================
 
@@ -152,7 +165,57 @@ previous.addEventListener("click", function() {
 
 //============================================================
 
+//Display correct photo in main image based on which thumbnail is clicked
 
+t1.addEventListener("click", function() {
+  removeImage();
+  mainImage.classList.add("image-1");
+  removeActive();
+  t1.classList.remove("thumbnail-1");
+  t1.classList.add("active-1");
+})
+
+t2.addEventListener("click", function() {
+  removeImage();
+  mainImage.classList.add("image-2");
+  removeActive();
+  t2.classList.remove("thumbnail-2");
+  t2.classList.add("active-2");
+})
+
+t3.addEventListener("click", function() {
+  removeImage();
+  mainImage.classList.add("image-3");
+  removeActive();
+  t3.classList.remove("thumbnail-3");
+  t3.classList.add("active-3");
+})
+
+t4.addEventListener("click", function() {
+  removeImage();
+  mainImage.classList.add("image-4");
+  removeActive();
+  t4.classList.remove("thumbnail-4");
+  t4.classList.add("active-4");
+})
+
+const removeImage = function() {
+    mainImage.classList.remove("image-1");
+    mainImage.classList.remove("image-2");
+    mainImage.classList.remove("image-3");
+    mainImage.classList.remove("image-4");
+}
+
+const removeActive = function() {
+    t1.classList.remove("active-1");
+    t1.classList.add("thumbnail-1");
+    t2.classList.remove("active-2");
+    t2.classList.add("thumbnail-2");
+    t3.classList.remove("active-3");
+    t3.classList.add("thumbnail-3");
+    t4.classList.remove("active-4");
+    t4.classList.add("thumbnail-4");
+}
 
 //============================================================
 
