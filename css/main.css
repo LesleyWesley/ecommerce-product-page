@@ -337,10 +337,24 @@ nav ul a {
 
 .carousel-button {
   background-color: var(--clr-white);
-  padding: .75rem;
+  padding: 1rem;
   aspect-ratio: 1;
   border-radius: 50%;
+  border: none;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+.previous {
+  background-image: url("../images/icon-previous.svg");
+}
+
+.next {
+  background-image: url("../images/icon-next.svg");
+}
+
+
 
 /*Classes for JavaScript - Carousel */
 
@@ -931,11 +945,6 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     width: 20%;
-  }
-
-  .lightbox .thumbnail {
-    width: 100%;
-    position: relative;
   }
 
   .overlay-div {

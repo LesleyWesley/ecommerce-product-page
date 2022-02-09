@@ -94,14 +94,21 @@ const t2 = document.querySelector(".thumbnail-2");
 const t3 = document.querySelector(".thumbnail-3");
 const t4 = document.querySelector(".thumbnail-4");
 
+//Selects close button of lightbox
+
+const close = document.querySelector(".close");
+
+//Selects main image in lightbox
+
+const lightboxMain = document.querySelector(".lightbox_active-image");
+
 //Contents of cart (number)
 
 let cartQuantity = 0;
 
-//Index of photo Carousel
+//Photo Carousel Index
 
 let i = 1;
-
 
 //============================================================
 
@@ -284,6 +291,14 @@ cartIcon.addEventListener("click", function() {
 //============================================================
 
 //Adds ability to open and close lightbox
+
+mainImage.addEventListener("click", function() {
+  lightbox.classList.remove("hide");
+})
+
+close.addEventListener("click", function() {
+  lightbox.classList.add("hide");
+})
 
 
 

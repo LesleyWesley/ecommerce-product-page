@@ -83,8 +83,8 @@
     <section class="photo-section">
         <div class="mobile-photo-section image-1">
             <div class="carousel-buttons">
-                <img src="images/icon-previous.svg" alt="previous" class="previous carousel-button" />
-                <img src="images/icon-next.svg" alt="next" class="next carousel-button" />
+                <button type="button" name="previous" class="previous carousel-button"></button>
+                <button type="button" name="next" class="next carousel-button"></button>
             </div>
         </div>
 
@@ -140,7 +140,7 @@
             <div class="lightbox hide">
                 <div class="lightbox-content-container">
                     <div class="lightbox_header">
-                        <img src="images/icon-close-lightbox.svg" alt="close" />
+                        <img src="images/icon-close-lightbox.svg" alt="close" class="close"/>
                     </div>
 
                     <div class="lightbox-main">
@@ -149,29 +149,18 @@
 
                           </div>
                           <div class="lightbox_forward-back-buttons">
-                              <button type="button" name="lightbox-back"></button>
-                              <button type="button" name="lightbox-forward"></button>
+                              <button type="button" name="lightbox-back" class="previous carousel-button"></button>
+                              <button type="button" name="lightbox-forward" class="next carousel-button"></button>
                           </div>
                         </div>
 
                         <!--Start of lightbox thumbnail section -->
                         <div class="lightbox_thumbnail-section">
-                            <div class="image-1-div thumbnail-div">
-                              <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail image-1" />
-                              <div class="overlay-div hide"></div>
-                            </div>
-                            <div class="image-2-div thumbnail-div">
-                              <img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbnail image-2" />
-                              <div class="overlay-div hide"></div>
-                            </div>
-                            <div class="image-3-div thumbnail-div">
-                              <img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbnail image-3" />
-                              <div class="overlay-div hide"></div>
-                            </div>
-                            <div class="image-4-div thumbnail-div">
-                              <img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbnail image-4" />
-                              <div class="overlay-div hide">
-                            </div>
+                          <div class="thumbnail-image thumbnail-1"></div>
+                          <div class="thumbnail-image thumbnail-2"></div>
+                          <div class="thumbnail-image thumbnail-3"></div>
+                          <div class="thumbnail-image thumbnail-4"></div>
+
                         </div>
                     </div>
                   </div>
