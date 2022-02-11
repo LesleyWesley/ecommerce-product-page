@@ -102,6 +102,19 @@ const close = document.querySelector(".close");
 
 const lightboxMain = document.querySelector(".lightbox_active-image");
 
+//Selects lightbox arrows
+
+const lightboxPrevious = document.querySelector(".lightbox-previous");
+
+const lightboxNext = document.querySelector(".lightbox-next");
+
+//Selects thumbnails in lightbox
+
+const lt1 = document.querySelector(".lightbox_thumbnail-section .thumbnail-1");
+const lt2 = document.querySelector(".lightbox_thumbnail-section .thumbnail-2");
+const lt3 = document.querySelector(".lightbox_thumbnail-section .thumbnail-3");
+const lt4 = document.querySelector(".lightbox_thumbnail-section .thumbnail-4");
+
 //Contents of cart (number)
 
 let cartQuantity = 0;
