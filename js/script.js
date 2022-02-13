@@ -195,7 +195,7 @@ t1.addEventListener("click", function() {
   t1.classList.add("active-1");
 })
 
-t2.addEventListener("click", function() {
+t2.addEventListener("click", function(i) {
   removeImage();
   mainImage.classList.add("image-2");
   removeActive();
@@ -253,6 +253,9 @@ minus.addEventListener("click", function() {
 
 //============================================================
 
+
+//============================================================
+
 //When "Add to Cart" is clicked, quantity input becomes new quantity of cart, and is then reset to 0
 
 addToCartButton.addEventListener("click", function () {
@@ -307,7 +310,32 @@ cartIcon.addEventListener("click", function() {
 
 mainImage.addEventListener("click", function() {
   lightbox.classList.remove("hide");
+  lightboxRemoveActive();
+  lt1.classList.add("active-1");
+  if (mainImage.classList.contains("image-2")) {
+    lightboxMain.classList.remove("image-1");
+    lightboxMain.classList.add("image-2");
+    lightboxRemoveActive();
+    lt2.classList.add("active-2");
+  } else if (mainImage.classList.contains("image-3")) {
+    lightboxMain.classList.remove("image-1");
+    lightboxMain.classList.add("image-3");
+    lightboxRemoveActive();
+    lt3.classList.add("active-3");
+  } else if (mainImage.classList.contains("image-4")) {
+    lightboxMain.classList.remove("image-1");
+    lightboxMain.classList.add("image-4");
+    lightboxRemoveActive();
+    lt4.classList.add("active-4");
+  }
 })
+
+const lightboxRemoveActive = function() {
+  lt1.classList.remove("active-1");
+  lt2.classList.remove("active-2");
+  lt3.classList.remove("active-3");
+  lt4.classList.remove("active-4");
+}
 
 close.addEventListener("click", function() {
   lightbox.classList.add("hide");
