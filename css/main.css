@@ -643,6 +643,7 @@ input[type=number] {
       background-size: contain cover;
       background-position: center center;
       background-repeat: no-repeat no-repeat;
+      margin: 0;
     }
 
     .thumbnail-2 {
@@ -659,6 +660,7 @@ input[type=number] {
       background-size: contain cover;
       background-position: center center;
       background-repeat: no-repeat no-repeat;
+      margin: 0;
     }
 
     .thumbnail-3 {
@@ -675,6 +677,7 @@ input[type=number] {
       background-size: contain cover;
       background-position: center center;
       background-repeat: no-repeat no-repeat;
+      margin: 0;
     }
 
     .thumbnail-4 {
@@ -691,6 +694,7 @@ input[type=number] {
       background-size: contain cover;
       background-position: center center;
       background-repeat: no-repeat no-repeat;
+      margin: 0;
     }
 }
 
