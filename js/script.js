@@ -123,6 +123,10 @@ let cartQuantity = 0;
 
 let i = 1;
 
+// Lightbox index
+
+let lightboxIndex = 1;
+
 //============================================================
 
 
@@ -312,23 +316,29 @@ mainImage.addEventListener("click", function() {
   lightbox.classList.remove("hide");
   lightboxRemoveActive();
   lt1.classList.add("active-1");
+  lightboxIndex = 1;
   if (mainImage.classList.contains("image-2")) {
     lightboxMain.classList.remove("image-1");
     lightboxMain.classList.add("image-2");
     lightboxRemoveActive();
     lt2.classList.add("active-2");
+    lightboxIndex = 2;
   } else if (mainImage.classList.contains("image-3")) {
     lightboxMain.classList.remove("image-1");
     lightboxMain.classList.add("image-3");
     lightboxRemoveActive();
     lt3.classList.add("active-3");
+    lightboxIndex = 3;
   } else if (mainImage.classList.contains("image-4")) {
     lightboxMain.classList.remove("image-1");
     lightboxMain.classList.add("image-4");
     lightboxRemoveActive();
     lt4.classList.add("active-4");
+    lightboxIndex = 4;
   }
 })
+
+//Removes active styling from thumbnails
 
 const lightboxRemoveActive = function() {
   lt1.classList.remove("active-1");
@@ -337,6 +347,8 @@ const lightboxRemoveActive = function() {
   lt4.classList.remove("active-4");
 }
 
+//Closes lightbox
+
 close.addEventListener("click", function() {
   lightbox.classList.add("hide");
 })
@@ -344,3 +356,90 @@ close.addEventListener("click", function() {
 
 
 //===========================================================
+
+//Adds ability to change main lightbox image based on which thumbnail is clicked
+
+lt1.addEventListener("click", function() {
+  lightboxIndex = 1;
+  lightboxRemoveActive();
+  lightboxRemoveMain();
+  lt1.classList.add("active-1");
+  lightboxMain.classList.add("image-1");
+})
+
+lt2.addEventListener("click", function() {
+  lightboxIndex = 2;
+  lightboxRemoveActive();
+  lightboxRemoveMain();
+  lt2.classList.add("active-2");
+  lightboxMain.classList.add("image-2");
+})
+
+lt3.addEventListener("click", function() {
+  lightboxIndex = 3;
+  lightboxRemoveActive();
+  lightboxRemoveMain();
+  lt3.classList.add("active-3");
+  lightboxMain.classList.add("image-3");
+})
+
+lt4.addEventListener("click", function() {
+  lightboxIndex = 4;
+  lightboxRemoveActive();
+  lightboxRemoveMain();
+  lt4.classList.add("active-4");
+  lightboxMain.classList.add("image-4");
+})
+
+//Removes background from main lightbox image
+
+const lightboxRemoveMain = function() {
+  lightboxMain.classList.remove("image-1");
+  lightboxMain.classList.remove("image-2");
+  lightboxMain.classList.remove("image-3");
+  lightboxMain.classList.remove("image-4");
+}
+
+//================================================
+
+//Adds ability to change lightbox image using forward and back buttons
+
+lightboxPrevious.addEventListener("click", function() {
+  lightboxRemoveActive();
+  lightboxRemoveMain();
+  if (lightboxIndex === 1) {
+    lightboxIndex = 4;
+    lightboxMain.classList.add("image-4");
+    lt4.classList.add("active-4");
+  } else {
+    lightboxIndex--;
+    lightboxMain.classList.add(`image-${lightboxIndex}`);
+    if (lightboxMain.classList.contains("image-1")) {
+      lt1.classList.add("active-1");
+    } else if (lightboxMain.classList.contains("image-2")) {
+      lt2.classList.add("active-2");
+    } else if (lightboxMain.classList.contains("image-3")) {
+      lt3.classList.add("active-3");
+    }
+  }
+})
+
+lightboxNext.addEventListener("click", function() {
+  lightboxRemoveActive();
+  lightboxRemoveMain();
+  if (lightboxIndex === 4) {
+    lightboxIndex = 1;
+    lightboxMain.classList.add("image-1");
+    lt1.classList.add("active-1");
+  } else {
+    lightboxIndex++;
+    lightboxMain.classList.add(`image-${lightboxIndex}`);
+    if (lightboxMain.classList.contains("image-4")) {
+      lt4.classList.add("active-4");
+    } else if (lightboxMain.classList.contains("image-2")) {
+      lt2.classList.add("active-2");
+    } else if (lightboxMain.classList.contains("image-3")) {
+      lt3.classList.add("active-3");
+    }
+  }
+})
