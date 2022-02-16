@@ -257,29 +257,57 @@ minus.addEventListener("click", function() {
 
 //============================================================
 
+addToCartButton.addEventListener("click", function() {
+  if (quantityInput.value === 0) {
+    if (cartQuantity > 0) {
+      cartQuantity = quantityInput.value;
+      quantityInput.value = 0;
+      console.log(cartQuantity);
+
+      cartQuantityDiv.classList.remove("hide");
+      cartQuantityDiv.innerText = `${cartQuantity}`;
+
+      emptyMessage.classList.add("hide");
+      fullCartContent.classList.remove("hide");
+      checkoutButton.classList.remove("hide");
+
+      cartQuantitySpan.innerText = `${cartQuantity}`;
+      totalPrice.innerText = `$${125 * cartQuantity}.00`;
+    } else {
+      let newCartQuantity = (cartQuantity + quantityInput.value);
+      quantityInput.value = 0;
+
+      cartQuantityDiv.innerText = `${newCartQuantity}`;
+      cartQuantitySpan.innerText = `${newCartQuantity}`;
+      totalPrice.innerText = `$${125 * newCartQuantity}.00`;
+    }
+  }
+})
+
+
 
 //============================================================
 
 //When "Add to Cart" is clicked, quantity input becomes new quantity of cart, and is then reset to 0
 
-addToCartButton.addEventListener("click", function () {
-  if (quantityInput.value > 0) {
+//addToCartButton.addEventListener("click", function () {
+  //if (quantityInput.value > 0) {
     //!!Need to fix the following line!!
-    cartQuantity = quantityInput.value;
-    quantityInput.value = 0;
-    console.log(cartQuantity);
+    //cartQuantity = quantityInput.value;
+    //quantityInput.value = 0;
+    //console.log(cartQuantity);
 
-    cartQuantityDiv.classList.remove("hide");
-    cartQuantityDiv.innerText = `${cartQuantity}`;
+    //cartQuantityDiv.classList.remove("hide");
+    //cartQuantityDiv.innerText = `${cartQuantity}`;
 
-    emptyMessage.classList.add("hide");
-    fullCartContent.classList.remove("hide");
-    checkoutButton.classList.remove("hide");
+    //emptyMessage.classList.add("hide");
+    //fullCartContent.classList.remove("hide");
+    //checkoutButton.classList.remove("hide");
 
-    cartQuantitySpan.innerText = `${cartQuantity}`;
-    totalPrice.innerText = `$${125 * cartQuantity}.00`;
-  }
-})
+    //cartQuantitySpan.innerText = `${cartQuantity}`;
+    //totalPrice.innerText = `$${125 * cartQuantity}.00`;
+  //}
+//})
 
 //============================================================
 
