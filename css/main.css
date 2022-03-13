@@ -445,7 +445,7 @@ h3 {
   text-decoration: line-through;
 }
 
-form {
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -859,7 +859,7 @@ input[type=number] {
     font-size: 1rem;
   }
 
-  form {
+  .form {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3rem;
