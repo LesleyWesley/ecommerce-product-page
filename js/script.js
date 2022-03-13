@@ -258,20 +258,16 @@ minus.addEventListener("click", function() {
 //============================================================
 
 
+
 //============================================================
+
+//When "Add to Cart" is clicked, quantity input becomes new quantity of cart, and is then reset to 0
 
 addToCartButton.addEventListener("click", function () {
   if (quantityInput.value > 0) {
-    if (cartQuantity > 0) {
-      let newCartQuantity = (cartQuantity + Number(quantityInput.value));
-      cartQuantityDiv.innerText = `${newCartQuantity}`;
-      cartQuantitySpan.innerText = `${newCartQuantity}`;
-      totalPrice.innerText = `$${125 * newCartQuantity}.00`;
-    }
     //!!Need to fix the following line!!
-    cartQuantity = Number(quantityInput.value);
+    cartQuantity = quantityInput.value;
     quantityInput.value = 0;
-    console.log(typeof(cartQuantity));
 
     cartQuantityDiv.classList.remove("hide");
     cartQuantityDiv.innerText = `${cartQuantity}`;
@@ -284,29 +280,6 @@ addToCartButton.addEventListener("click", function () {
     totalPrice.innerText = `$${125 * cartQuantity}.00`;
   }
 })
-
-//============================================================
-
-//When "Add to Cart" is clicked, quantity input becomes new quantity of cart, and is then reset to 0
-
-//addToCartButton.addEventListener("click", function () {
-  //if (quantityInput.value > 0) {
-    //!!Need to fix the following line!!
-    //cartQuantity = Number(quantityInput.value);
-    //quantityInput.value = 0;
-    //console.log(typeof(cartQuantity));
-
-    //cartQuantityDiv.classList.remove("hide");
-    //cartQuantityDiv.innerText = `${cartQuantity}`;
-
-    //emptyMessage.classList.add("hide");
-    //fullCartContent.classList.remove("hide");
-    //checkoutButton.classList.remove("hide");
-
-    //cartQuantitySpan.innerText = `${cartQuantity}`;
-    //totalPrice.innerText = `$${125 * cartQuantity}.00`;
-  //}
-//})
 
 //============================================================
 
