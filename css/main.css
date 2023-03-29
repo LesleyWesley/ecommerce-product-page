@@ -708,9 +708,6 @@ input[type=number] {
 
   /* HEADER STYLINGS - DESKTOP*/
 
-  body {
-    height: 100vh;
-  }
 
   header .container {
     border-bottom: 1px solid var(--clr-lightest-text);
